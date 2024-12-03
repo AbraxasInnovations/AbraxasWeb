@@ -17,8 +17,8 @@ const PipelineBackground = () => {
     const turnCount = 8;
     const turnAmount = (360 / turnCount) * TO_RAD;
     const turnChanceRange = 48;
-    const baseSpeed = 0.6;
-    const rangeSpeed = 1.5;
+    const baseSpeed = 0.8;
+    const rangeSpeed = 2;
     const baseTTL = 100;
     const rangeTTL = 300;
     const baseWidth = 2;
@@ -27,7 +27,7 @@ const PipelineBackground = () => {
     const rangeHue = 60;
     const backgroundColor = 'hsla(150,80%,1%,1)';
 
-    // Animation duration (10 seconds)
+    // Animation duration (20 seconds)
     const ANIMATION_DURATION = 20000;
     let startTime = Date.now();
     let isAnimating = true;
@@ -71,7 +71,7 @@ const PipelineBackground = () => {
     function initPipe(i) {
       let x, y, direction, speed, life, ttl, width, hue;
       x = rand(canvas.a.width);
-      y = rand(canvas.a.height);
+      y = center[1];
       direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
       speed = baseSpeed + rand(rangeSpeed);
       life = 0;
@@ -179,15 +179,12 @@ const PipelineBackground = () => {
       const currentTime = Date.now();
       const elapsedTime = currentTime - startTime;
       
-      // Calculate fade out during last 2 seconds
-      if (elapsedTime > ANIMATION_DURATION - 2000) {
-        const opacity = Math.max(0, (ANIMATION_DURATION - elapsedTime) / 2000);
-        canvas.b.style.opacity = opacity.toString();
-      }
-
-      // Stop animation after duration
+      // Stop animation after duration without fading
       if (elapsedTime >= ANIMATION_DURATION) {
         isAnimating = false;
+        // Draw one final frame to ensure everything is visible
+        updatePipes();
+        render();
         return;
       }
 

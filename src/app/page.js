@@ -30,7 +30,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20" />
         <div className="relative container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Innovating the Future
+            Innovating Decentralized Finance
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             Pushing boundaries. Breaking limits. Creating tomorrow.

@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { ChevronDown, ArrowRight, Globe, Cpu, Lightbulb } from 'lucide-react';
+import PipelineBackground from './PipelineBackground';
 
 export default function Home() {
   return (
@@ -27,8 +28,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20" />
-        <div className="relative container mx-auto px-6 text-center">
+        <PipelineBackground />
+        <div className="relative container mx-auto px-6 text-center z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Innovating Decentralized Finance
           </h1>

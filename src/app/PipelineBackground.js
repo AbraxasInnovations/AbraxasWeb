@@ -16,9 +16,9 @@ const PipelineBackground = () => {
     const pipePropsLength = pipeCount * pipePropCount;
     const turnCount = 8;
     const turnAmount = (360 / turnCount) * TO_RAD;
-    const turnChanceRange = 28;
-    const baseSpeed = 0.9;
-    const rangeSpeed = 2;
+    const turnChanceRange = 48;
+    const baseSpeed = 0.6;
+    const rangeSpeed = 1.5;
     const baseTTL = 100;
     const rangeTTL = 300;
     const baseWidth = 2;

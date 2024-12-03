@@ -83,12 +83,12 @@ export default function Home() {
               },
               {
                 icon: <Cpu className="w-12 h-12 text-purple-400" />,
-                title: "Advanced Technology",
-                description: "Leveraging cutting-edge technology to solve complex problems."
+                title: "Asset Management",
+                description: "Leveraging cutting-edge technology to capitalize on market inneficiencies and risk premiums."
               },
               {
                 icon: <Lightbulb className="w-12 h-12 text-green-400" />,
-                title: "Creative Innovation",
+                title: "Innovative Platforms",
                 description: "Thinking outside the box to create revolutionary solutions."
               }
             ].map((service, index) => (

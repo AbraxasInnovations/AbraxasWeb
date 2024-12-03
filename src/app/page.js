@@ -6,10 +6,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Navigation */}
-      <nav className="fixed w-full bg-black/50 backdrop-blur-md z-50">
+      <nav className="fixed w-full bg-black z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold">Abraxas Innovations</div>
+            <div className="h-12">
+              <img 
+                src="/images/abaraxaslogo.jpeg"
+                alt="Abraxas Innovations Logo"
+                className="h-full w-auto"
+              />
+            </div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
               <a href="#services" className="hover:text-blue-400 transition-colors">Services</a>

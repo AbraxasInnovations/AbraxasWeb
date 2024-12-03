@@ -16,9 +16,9 @@ const PipelineBackground = () => {
     const pipePropsLength = pipeCount * pipePropCount;
     const turnCount = 8;
     const turnAmount = (360 / turnCount) * TO_RAD;
-    const turnChanceRange = 58;
-    const baseSpeed = 0.5;
-    const rangeSpeed = 1;
+    const turnChanceRange = 48;
+    const baseSpeed = 0.6;
+    const rangeSpeed = 1.5;
     const baseTTL = 100;
     const rangeTTL = 300;
     const baseWidth = 2;
@@ -71,7 +71,7 @@ const PipelineBackground = () => {
     function initPipe(i) {
       let x, y, direction, speed, life, ttl, width, hue;
       x = rand(canvas.a.width);
-      y = center[1];
+      y = rand(canvas.a.height);
       direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
       speed = baseSpeed + rand(rangeSpeed);
       life = 0;

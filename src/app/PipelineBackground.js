@@ -71,7 +71,7 @@ const PipelineBackground = () => {
     function initPipe(i) {
       let x, y, direction, speed, life, ttl, width, hue;
       x = rand(canvas.a.width);
-      y = center[1];
+      y = rand(canvas.a.height);
       direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
       speed = baseSpeed + rand(rangeSpeed);
       life = 0;

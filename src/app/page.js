@@ -76,29 +76,37 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12 text-center">Our Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Globe className="w-12 h-12 text-blue-400" />,
-                title: "Global Solutions",
-                description: "Delivering innovative solutions across borders and industries."
-              },
-              {
-                icon: <Cpu className="w-12 h-12 text-purple-400" />,
-                title: "Asset Management",
-                description: "Leveraging cutting-edge technology to capitalize on market inneficiencies and risk premiums."
-              },
-              {
-                icon: <Lightbulb className="w-12 h-12 text-green-400" />,
-                title: "Innovative Solutions",
-                description: "Thinking outside the box to create revolutionary businesses."
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-lg p-8 hover:bg-gray-800 transition-colors">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
+            // Find the services section and update the map function:
+{[
+  {
+    icon: <Globe className="w-12 h-12 text-blue-400" />,
+    title: "Global Solutions",
+    description: "Delivering innovative solutions across borders and industries."
+  },
+  {
+    icon: <Cpu className="w-12 h-12 text-purple-400" />,
+    title: "Asset Management",
+    description: "Leveraging cutting-edge technology to capitalize on market inefficiencies and risk premiums.",
+    link: "/asset-management"  // Add this line
+  },
+  {
+    icon: <Lightbulb className="w-12 h-12 text-green-400" />,
+    title: "Innovative Platforms",
+    description: "Thinking outside the box to create revolutionary solutions."
+  }
+].map((service, index) => (
+  <div 
+    key={index} 
+    className={`bg-gray-800/50 rounded-lg p-8 hover:bg-gray-800 transition-colors ${
+      service.link ? 'cursor-pointer' : ''
+    }`}
+    onClick={() => service.link && window.location.href = service.link}
+  >
+    <div className="mb-4">{service.icon}</div>
+    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+    <p className="text-gray-300">{service.description}</p>
+  </div>
+))}
           </div>
         </div>
       </section>

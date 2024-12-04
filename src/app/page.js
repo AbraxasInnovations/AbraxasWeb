@@ -51,7 +51,7 @@ export default function Home() {
               <p className="text-lg text-gray-300 leading-relaxed">
                 At Abraxas Innovations, we're dedicated to pushing the boundaries of what's possible. 
                 Our team of experts works tirelessly to develop cutting-edge solutions that transform 
-                industries and improve lives.
+                the fabric of DeFi.
               </p>
               <button className="mt-8 flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
                 <span>Learn more about our mission</span>
@@ -89,8 +89,8 @@ export default function Home() {
               },
               {
                 icon: <Lightbulb className="w-12 h-12 text-green-400" />,
-                title: "Innovative Platforms",
-                description: "Thinking outside the box to create revolutionary solutions."
+                title: "Innovative Solutions",
+                description: "Thinking outside the box to create revolutionary businesses."
               }
             ].map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-lg p-8 hover:bg-gray-800 transition-colors">

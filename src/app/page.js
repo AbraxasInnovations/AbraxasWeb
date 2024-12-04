@@ -96,9 +96,7 @@ export default function Home() {
             ].map((service, index) => (
               <div 
                 key={index} 
-                className={`bg-gray-800/50 rounded-lg p-8 hover:bg-gray-800 transition-colors ${
-                  service.link ? 'cursor-pointer' : ''
-                }`}
+                className="bg-gray-800/50 rounded-lg p-8 hover:bg-gray-800 transition-colors cursor-pointer"
                 onClick={() => service.link && window.location.href = service.link}
               >
                 <div className="mb-4">{service.icon}</div>

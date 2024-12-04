@@ -11,13 +11,13 @@ const PipelineBackground = () => {
     const HALF_PI = Math.PI / 0.5;
     
     // Animation settings
-    const pipeCount = 30;
+    const pipeCount = 50;
     const pipePropCount = 8;
     const pipePropsLength = pipeCount * pipePropCount;
     const turnCount = 8;
     const turnAmount = (360 / turnCount) * TO_RAD;
     const turnChanceRange = 48;
-    const baseSpeed = 0.8;
+    const baseSpeed = 1;
     const rangeSpeed = 2;
     const baseTTL = 100;
     const rangeTTL = 300;

@@ -13,7 +13,7 @@ export default function Home() {
             <div className="h-12">
               <img 
                 src="/images/abaraxaslogo.jpeg"
-                alt="Abraxas Innovations Logo"
+                alt="Abraxas Innovations"
                 className="h-full w-auto"
               />
             </div>

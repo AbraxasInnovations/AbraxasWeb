@@ -15,6 +15,18 @@ const geistMono = localFont({
 export const metadata = {
   title: "Abraxas Innovations",
   description: "Multi-Strategy DeFi",
+  openGraph: {
+    title: 'Abraxas Innovations',
+    description: 'Innovating Decentralized Finance',
+    type: 'website',
+  },
+  other: {
+    'google-site-verification': '',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({ children }) {
